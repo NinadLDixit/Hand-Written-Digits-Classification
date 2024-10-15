@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Digit Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Handwritten Digit Classifier</h1>
+        <p>Upload an image to classify handwritten digits using a CNN model.</p>
+    </header>
+
+    <section class="upload-section">
+        <h2>Upload your image</h2>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" class="upload-input" accept="image/*" required>
+            <button type="submit" class="btn-submit">Classify Digit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Handwritten Digit Classifier. All rights reserved.</p>
+    </footer>
+</body>
+</html>
